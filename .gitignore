@@ -8,3 +8,29 @@ models/
 .DS_Store
 .idea/
 .vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env
+
+# Flask cache
+instance/
+*.db
+*.sqlite3
+
+# Pytest cache
+.pytest_cache/
+
+# Logs
+*.log
