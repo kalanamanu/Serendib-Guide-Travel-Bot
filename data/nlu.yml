@@ -19,6 +19,7 @@ nlu:
       - see ya
       - catch you later
       - good night
+      - bye bye
 
   - intent: thankyou
     examples: |
