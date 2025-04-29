@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to bot identity query
+    steps:
+      - intent: ask_are_you_a_bot
+      - action: utter_bot_identity
+
+  - rule: Respond to creator query
+    steps:
+      - intent: ask_who_made_you
+      - action: utter_bot_origin
+
+  - rule: Respond to human check
+    steps:
+      - intent: ask_are_you_human
+      - action: utter_bot_human_check
+
+  - rule: Provide city info
+    steps:
+      - intent: ask_city_info
+      - action: action_provide_city_info
+
+  - rule: answer places to visit
+    steps:
+      - intent: ask_places_in_city
+      - action: action_provide_places
+
+  - rule: Handle user expressing dislike
+    steps:
+      - intent: express_dislike
+      - action: utter_dislike_response
+
+  - rule: Handle thank you
+    steps:
+      - intent: thankyou
+      - action: utter_thank
+
+  - rule: Ask for trip plan (normal flow)
+    steps:
+      - intent: ask_trip_plan
+      - action: utter_ask_city
+
+  - rule: Generate trip plan directly when all info provided
+    steps:
+      - intent: generate_trip_plan
+      - action: action_generate_trip_plan

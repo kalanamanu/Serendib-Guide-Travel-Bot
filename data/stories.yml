@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+  - story: greet and happy mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: greet and sad mood with recovery
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_unhappy
+      - intent: affirm
+      - action: utter_happy
+
+  - story: greet and sad mood with exit
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_unhappy
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: ask about a location
+    steps:
+      - intent: ask_city_info
+      - action: action_provide_city_info
+
+  - story: ask places in a city
+    steps:
+      - intent: ask_places_in_city
+      - action: action_provide_places
+
+  - story: basic trip planning (normal ask)
+    steps:
+      - intent: ask_trip_plan
+      - action: utter_ask_city
+
+  - story: direct full trip planning (city+duration+budget given)
+    steps:
+      - intent: generate_trip_plan
+        entities:
+          - city: "Ella"
+          - duration: "3 days"
+          - budget: "2000"
+      - action: action_generate_trip_plan

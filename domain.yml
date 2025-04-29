@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - express_dislike
+  - ask_are_you_a_bot
+  - ask_are_you_human
+  - ask_who_made_you
+  - ask_city_info
+  - ask_trip_plan
+  - generate_trip_plan
+  - ask_places_in_city
+  - provide_trip_info
+  - thankyou
+
+entities:
+  - city
+  - duration
+  - budget
+  - category
+  - days
+
+slots:
+  city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city
+
+  duration:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: duration
+
+  budget:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: budget
+
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+
+responses:
+  utter_greet:
+    - text: "Ayubowan! 🇱🇰 How can I help you explore Sri Lanka today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Safe travels and come back soon! 👋"
+
+  utter_thank:
+    - text: "You're welcome! Have a safe and fun journey! 🎉"
+
+  utter_happy:
+    - text: "Great! Wishing you joyful travels! 🌴"
+
+  utter_unhappy:
+    - text: "I'm really sorry to hear that. I'll try to do better next time."
+
+  utter_dislike_response:
+    - text: "Noted! Let me improve that for the future. 💡"
+
+  utter_bot_identity:
+    - text: "Yes, I'm Serendib Guide 🤖 — your virtual Sri Lankan travel buddy!"
+
+  utter_bot_origin:
+    - text: "I was proudly created by Kalana Jayasekara and Sanupa Bimsath from ESOFT METRO CAMPUS Kurunegala 👨‍💻🎓"
+
+  utter_bot_human_check:
+    - text: "I'm not human — but I'm here to help like a friendly local 🇱🇰"
+
+  utter_ask_category:
+    - text: "🌴 What kind of places are you interested in? Beaches, hills, ancient cities, etc?"
+
+  utter_ask_duration:
+    - text: "🕒 How many days are you thinking of traveling?"
+
+  utter_ask_budget:
+    - text: "💸 What's your budget for this trip?"
+
+  utter_ask_city:
+    - text: "🏙️ Which city would you love to explore?"
+
+actions:
+  - action_provide_city_info
+  - action_provide_places
+  - action_generate_trip_plan
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

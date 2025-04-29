@@ -1,0 +1,233 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+      - good morning
+      - good evening
+      - hey there
+      - ayubowan
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - see ya
+      - catch you later
+      - good night
+
+  - intent: thankyou
+    examples: |
+      - thanks
+      - thank you
+      - much appreciated
+      - cheers
+      - Thank you
+      - Thankyou
+      - thankyou
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - yesss
+      - indeed
+      - of course
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - never
+      - I don't think so
+
+  - intent: mood_great
+    examples: |
+      - I'm feeling great
+      - I'm doing awesome
+      - feeling amazing
+      - really good
+      - I am happy
+
+  - intent: mood_unhappy
+    examples: |
+      - not feeling well
+      - I'm sad
+      - feeling down
+      - very unhappy
+      - I'm depressed
+
+  - intent: express_dislike
+    examples: |
+      - I don't like that
+      - that's bad
+      - not good
+      - disappointed
+
+  - intent: ask_are_you_a_bot
+    examples: |
+      - are you a bot?
+      - are you real?
+      - are you bot
+
+  - intent: ask_are_you_human
+    examples: |
+      - are you a human?
+      - are you a real person?
+      - are you human?
+
+  - intent: ask_who_made_you
+    examples: |
+      - who built you?
+      - who made you?
+      - who created you?
+
+  - intent: ask_city_info
+    examples: |
+      - tell me about [Kandy](city)
+      - give me info about [Colombo](city)
+      - information about [Galle](city)
+      - what can you tell me about [Jaffna](city)
+      - explore [Ella](city)
+
+  - intent: ask_places_in_city
+    examples: |
+      - what places can I visit in [Galle](city)?
+      - famous places in [Anuradhapura](city)
+      - what are the attractions in [Nuwara Eliya](city)?
+      - things to see in [Trincomalee](city)
+      - Tell me sightseeing places in [Kandy](city)
+      - Attractions in [Nuwara Eliya](city)
+      - Where can I go in [Colombo](city)?
+      - Must-visit places in [Galle](city)
+
+  - intent: generate_trip_plan
+    examples: |
+      - plan a trip to [Colombo](city)
+      - suggest a travel plan to [Galle](city) for [5](duration) days with a budget of [100000](budget)
+      - I want to go to [Ella](city) for [3](duration) days under [40000](budget)
+      - create a trip plan to [Jaffna](city)
+      - Plan a [2](duration) days trip to [Kandy](city) under [20000](budget) budget
+      - Plan a trip with [20000](budget) budget
+
+  - intent: ask_trip_plan
+    examples: |
+      - help me plan my trip
+      - I need a travel plan
+      - can you plan my vacation?
+      - need help planning a trip
+
+  - intent: provide_trip_info
+    examples: |
+      - I have [3](duration) days and [50000](budget) LKR
+      - My budget is [70000](budget) for [5](duration) days
+      - I can travel for [4](duration) days with [45000](budget) rupees
+
+    # ──────────── CITY LIST LOOKUP ────────────
+  - lookup: city
+    examples: |
+      - Bentota
+      - Unawatuna
+      - Mirissa
+      - Tangalle
+      - Hikkaduwa
+      - Weligama
+      - Nilaveli
+      - Uppuveli
+      - Trincomalee
+      - Arugam Bay
+      - Pasikudah
+      - Kalkudah
+      - Mount Lavinia
+      - Negombo
+      - Beruwala
+      - Wadduwa
+      - Kalutara
+      - Induruwa
+      - Kosgoda
+      - Ambalangoda
+      - Polhena
+      - Talalla
+      - Hiriketiya
+      - Dickwella
+      - Batticaloa
+      - Kuchchaveli
+      - Chilaw
+      - Marawila
+      - Puttalam
+      - Mannar Island
+      - Kandy
+      - Nuwara
+      - Ella
+      - Haputale
+      - Bandarawela
+      - Hatton
+      - Maskeliya
+      - Badulla
+      - Ratnapura
+      - Kitulgala
+      - Belihuloya
+      - Gampola
+      - Nawalapitiya
+      - Balangoda
+      - Kegalle
+      - Anuradhapura
+      - Polonnaruwa
+      - Sigiriya
+      - Dambulla
+      - Mihintale
+      - Aukana
+      - Yapahuwa
+      - Panduwasnuwara
+      - Kurunegala
+      - Kataragama
+      - Jaffna
+      - Kantale
+      - Medirigiriya
+      - Ritigala
+      - Thivanka Pilimage
+      - Yala National Park
+      - Wilpattu National Park
+      - Udawalawe National Park
+      - Horton Plains National Park
+      - Minneriya National Park
+      - Kaudulla National Park
+      - Wasgamuwa National Park
+      - Bundala National Park
+      - Sinharaja Forest Reserve
+      - Knuckles Mountain Range
+      - Peak Wilderness Sanctuary
+      - Gal Oya National Park
+      - Lunugamvehera National Park
+      - Maduru Oya National Park
+      - Somawathiya National Park
+      - Colombo
+      - Dehiwala Zoo
+      - Pinnawala Elephant Orphanage
+      - Peradeniya Botanical Gardens
+      - Spice Gardens
+      - Tea Estates
+      - Gem Museums
+      - Traditional Village Experiences
+      - Hot Air Ballooning
+      - Ayurvedic Retreats
+      - Train Journeys
+      - Diyaluma Falls
+      - Dunhinda Falls
+      - Ravana Falls
+      - Bambarakanda Falls
+      - Horton Plains Railway Station
+      - Ohiya Railway Station
+      - Nine Arch Bridge
+      - St. Clair's Falls
+      - Devon Falls 
+      - Lipton's Seat
+      - World's End
+      - Baker's Falls
+      - Kirinda
+      - Delft Island
+      - Gall

@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+models/
+.rasa/
+.env
+*.db
+*.sqlite
+.DS_Store
+.idea/
+.vscode/
