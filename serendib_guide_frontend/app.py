@@ -3,11 +3,11 @@ import requests
 
 app = Flask(__name__)
 
-RASA_URL = 'http://localhost:5005/webhooks/rest/webhook'  # Rasa URL
+RASA_URL = 'http://localhost:5005/webhooks/rest/webhook'  
 
 @app.route('/')
 def home():
-    return render_template('index.html')  # You'll create this later
+    return render_template('index.html')  
 
 @app.route('/chat', methods=['POST'])
 def chat():

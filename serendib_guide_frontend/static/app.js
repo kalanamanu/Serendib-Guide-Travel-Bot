@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleUserInput() {
         const message = userInput.value.trim();
         if (message) {
-            // Hide initial greeting if it's still visible
+
             const initialGreeting = document.getElementById('initial-greeting');
             if (initialGreeting) {
                 initialGreeting.classList.add('hidden');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             addMessage(message, true);
             userInput.value = '';
 
-            // Simulate bot response after a short delay
+
             setTimeout(() => {
                 fetch('/chat', {
                     method: 'POST',

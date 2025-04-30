@@ -4,7 +4,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import mysql.connector
 from rasa_sdk.events import SlotSet
 
-# Helper function for MySQL connection
+
 def get_mysql_connection():
     return mysql.connector.connect(
         host="localhost",
@@ -130,7 +130,7 @@ class ActionGenerateTripPlan(Action):
             best_time = city_info['best_time']
 
             # Stay details
-            days = int(duration.split()[0])  # assume "2 days"
+            days = int(duration.split()[0])  
             budget_per_night = int(budget) / days
 
             cursor.execute("""
@@ -155,7 +155,7 @@ class ActionGenerateTripPlan(Action):
             """, (city_id,))
             places = cursor.fetchall()
 
-            # ✨ Build smarter, richer response
+            
             response = f"🌍 *Exciting {days}-Day Trip Plan to {city}* 🌴\n\n"
             response += f"{description}\n\n"
             response += f"🕒 *Ideal Time to Visit:* {best_time}\n\n"
@@ -184,7 +184,7 @@ class ActionGenerateTripPlan(Action):
 
             dispatcher.utter_message(text=response)
 
-            # Friendly ending
+            
             dispatcher.utter_message(text="Would you like me to plan another adventure? Just tell me where you'd love to go next! 🚀")
 
             # Reset slots to allow new planning
