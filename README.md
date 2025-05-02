@@ -39,7 +39,7 @@ We would like to express our sincere gratitude to our module lecturer, Mr. Kalan
 ## 🏗️ Technologies Used
 
 - Rasa Open Source (NLU + Core)
-- Python 3.x
+- Python 3.10
 - Flask
 - MySQL
 - HTML, CSS, JavaScript (Frontend UI)
