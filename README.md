@@ -2,11 +2,11 @@
 
 Serendib Guide is an intelligent, user-friendly travel assistant chatbot built using Rasa (NLU engine), Flask (API bridge), and MySQL (data layer). It helps users plan trips, explore destinations in Sri Lanka, and receive real-time travel suggestions using natural language queries.
 
-🧠 Built as part of the AI Coursework 2 for the Artificial Intelligence module in the BEng (Hons) in Software Engineering (Top-Up) degree program, offered by London Metropolitan University through ESOFT Metro Campus, Kurunegala, Sri Lanka.
+Built as part of the AI Coursework 2 for the Artificial Intelligence module in the BEng (Hons) in Software Engineering (Top-Up) degree program, offered by London Metropolitan University through ESOFT Metro Campus, Kurunegala, Sri Lanka.
 
 ---
 
-## 📂 Project Overview
+## Project Overview
 
 This project demonstrates how conversational AI can be applied in the travel domain by integrating:
 - Natural Language Understanding (NLU) using Rasa
@@ -21,7 +21,7 @@ Users can:
 
 ---
 
-## 👥 Project Contributors
+## Project Contributors
 
 - Kalana Jayasekara
 - Sanupa Marapana
@@ -30,13 +30,13 @@ Group Project for AI Coursework 2 (Artificial Intelligence module)
 
 ---
 
-## 👨‍🏫 Acknowledgements
+## Acknowledgements
 
 We would like to express our sincere gratitude to our module lecturer, Mr. Kalana Amarasekara, for his continuous support, guidance, and encouragement throughout the development of this project.
 
 ---
 
-## 🏗️ Technologies Used
+## Technologies Used
 
 - Rasa Open Source (NLU + Core)
 - Python 3.10
@@ -48,7 +48,7 @@ We would like to express our sincere gratitude to our module lecturer, Mr. Kalan
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to install and run the chatbot locally.
 
@@ -115,7 +115,7 @@ Follow these steps to install and run the chatbot locally.
 
 ---
 
-## 📌 Notes
+## Notes
 
 - This is a local demo. Deployment options (Heroku, Docker, etc.) can be added later.
 - Voice interface and advanced ML features are planned in future releases.
